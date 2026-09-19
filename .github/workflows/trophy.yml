@@ -4,11 +4,6 @@ on:
   schedule:
     - cron: "0 0 * * *" # Daily at midnight UTC
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - '.github/workflows/trophy.yml'
 
 jobs:
   generate:
@@ -16,6 +11,8 @@ jobs:
     permissions:
       contents: write
     timeout-minutes: 10
+    # Run only if a Personal Access Token is configured to prevent GITHUB_TOKEN from overwriting with 0-counts
+    if: "${{ secrets.PAT_TOKEN != '' }}"
 
     steps:
       - name: Checkout repository
@@ -25,8 +22,8 @@ jobs:
         uses: soulteary/github-profile-trophy-action@v1.0.0
         with:
           path: assets/trophy.svg
-          options: "username=${{ github.repository_owner }}&theme=dracula&rank=S,AAA,AA,A,B,C&row=1&column=7&margin-w=8&margin-h=8&no-bg=false&no-frame=false"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          options: "username=${{ github.repository_owner }}&theme=dracula&title=MultiLanguage,Repositories,Commits,Experience,Stars,Followers,PullRequest&row=1&column=7&margin-w=8&margin-h=8&no-bg=false&no-frame=false"
+          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Commit and push changes
         run: |
