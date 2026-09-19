@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/Mazen149">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=2500&pause=1200&color=BD93F9&center=true&vCenter=true&width=550&height=50&lines=Hello%2C+I'm+Mazen+Mohamed+👋;AI+Engineer+🤖" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=2500&pause=1200&color=BD93F9&center=true&vCenter=true&width=550&height=50&lines=Hello%2C+I%27m+Mazen+Mohamed%3BAI+Engineer" alt="Typing SVG" />
   </a>
 </div>
 
